@@ -21,7 +21,7 @@ const getAllProductsQueries: string = `
           "image": image.asset->url,
           contact,
           address,
-          email
+          email,
       },
         "mainImage": mainImage.asset->url,
         
