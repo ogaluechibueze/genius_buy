@@ -42,10 +42,7 @@ const CategoryPage = async ({ params: { id } }: Props) => {
         btnLink={'/products'}/> 
 </div>
 
-     <CustomBreadcrumb items={[...defaultBreadcrumbItems, {
-       name: products[0]!.category!.name,
-       link: '/products'
-     }]}/>
+     
      <AllProducts products={products}/>
     </>
   );

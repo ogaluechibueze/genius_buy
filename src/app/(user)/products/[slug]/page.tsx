@@ -1,4 +1,5 @@
 
+import { Box } from '@chakra-ui/react';
 import ProductDetails from '@src/features/products/ProductDetails';
 import { IProduct } from '@src/model';
 import { client } from '@util/sanity.client';
@@ -33,9 +34,9 @@ async function ProductDetailsPage({ params: { slug } }: Props) {
   const product: IProduct = await client.fetch(query, { slug });
 
   return (
-    <>
+    <Box paddingTop={'3rem'}>
       <ProductDetails product={product} />
-    </>
+      </Box>
   );
 }
 

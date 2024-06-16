@@ -23,6 +23,7 @@ interface IProductDetailsProps{
    
   return (
     <>
+    
     <CustomBreadcrumb items = {[...defaultBreadcrumbItems,
       {
         name: product.category!.name,
@@ -87,7 +88,7 @@ interface IProductDetailsProps{
             {/*<AddToCartButton product={product} count={quantity}/>*/}
            </Box>
 
-    <Stack py="2rem">
+    <Stack py="2rem" >
             {/*<Box borderWidth={1} borderColor="gray.100" p="1rem">
               <Text fontWeight="bold">Free Delivery</Text>
               <ChakraLink textDecor="underline" color="gray.500">
@@ -106,6 +107,7 @@ interface IProductDetailsProps{
     
     </GridItem>
     </Grid>  
+    
     </>
   );
 };
