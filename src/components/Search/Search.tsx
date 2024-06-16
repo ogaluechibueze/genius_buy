@@ -14,7 +14,7 @@ import { IProduct } from '@src/model';
 import { client } from '@util/sanity.client';
 import { groq } from 'next-sanity';
 import Link from 'next/link';
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { inputGroup } from './Style';
 
 const query: string = groq`
@@ -47,14 +47,14 @@ export const Search = () => {
     },
   });
 
-  const fetchProducts = async () => {
+  const fetchProducts = useCallback( async () => {
     setIsLoading(true);
     const products: IProduct[] = await client.fetch(query, {
       searchText: `*${searchText}*`,
     });
     setProducts(products);
     setIsLoading(false);
-  };
+  },[searchText]);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -64,7 +64,7 @@ export const Search = () => {
     }, 1000);
 
     return () => clearTimeout(timeout);
-  }, [searchText]);
+  }, [fetchProducts,searchText])// eslint-disable-line react-hooks/exhaustive-deps;
 
   return (
     <Box pos="relative" w={{ base: '100%', lg: '32rem' }} ref={ref}>

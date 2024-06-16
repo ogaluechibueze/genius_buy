@@ -1,7 +1,7 @@
-import { Box, Card, CardBody, CardHeader, FormLabel, Heading, Input, Stack, Text } from '@chakra-ui/react'
-import SellerHero from '@src/components/SellerHero/SellerHero';
-import { AppContext } from '@src/context/AppContext'
-import React, { useContext } from 'react'
+'use client'
+import { Box, Card, CardBody, CardHeader, FormLabel, Heading, Input, Stack, Text } from '@chakra-ui/react';
+import { AppContext } from '@src/context/AppContext';
+import React, { useContext } from 'react';
 
 
 
@@ -29,12 +29,10 @@ const DeliveryInformation = () => {
                 <FormLabel fontWeight={'bold'}>ADDRESS</FormLabel>
                 <Text>{item.category?.address}</Text>
               </Box>
-
-              <Box>
+               <Box>
                 <FormLabel fontWeight={'bold'}>PHONE NUMBER</FormLabel>
                 <Text>{item.category?.contact}</Text>
               </Box>
-
               <Box>
                 <FormLabel fontWeight={'bold'}>EMAIL</FormLabel>
                 <Text>{item.category?.email}</Text>
