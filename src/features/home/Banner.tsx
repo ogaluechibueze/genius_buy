@@ -25,7 +25,7 @@ export const Banner = () => {
     <Box w={{ base: '100%', lg: '50%' }}>
     <Box mx={'2rem'} w={{base: '300px', lg: '600px'}}
     h={{base: '300px', lg: '500px'}}
-    bg={'center / cover no-repeat url(mockup.svg)'}/>
+    bg={'center / cover no-repeat url(shop2.jpg)'}/>
     </Box>
     </Flex>
   );
