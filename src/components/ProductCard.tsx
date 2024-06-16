@@ -1,10 +1,8 @@
-import { Box, ButtonGroup, Card, CardBody, CardFooter, Divider, Flex, Heading, Image, Link, Stack, Text } from '@chakra-ui/react';
+import { Box, Card, CardBody, Flex, Heading, Link, Stack, Text } from '@chakra-ui/react';
 import React from 'react'
 import Rating from './Rating';
-import { AddToCartButton } from './AddToCartButton';
 import { IProduct } from '@src/model';
 import { getSubstring } from '@src/helpers';
-import { AddToWishlistButton } from './AddToWishlistButton';
 
 interface IProductCardProps{
   product: IProduct;

@@ -20,8 +20,10 @@ const Hero = ({heading, description, imageUrl, btnLabel, btnLink, contact, addre
     <Box mx={'2rem'} w={{base: '100%', lg: '50%'}}>
    <Heading size={{base: '1x', lg: '2x1'}}>{heading}</Heading>
    <Text py={'1rem'}>{description}</Text>
-   <Link href={btnLink}></Link>
+   <Link href={btnLink}>
    <Button rounded={'full'} minW={'10rem'} bgColor={'brand.primary'} color={'white'} _hover={{bgColor: 'brand.primaryDark'}} > {btnLabel} </Button>
+   </Link>
+
    <Text fontWeight={'bold'} py={'1rem'}>{contact}</Text>
    <Text fontWeight={'bold'} py={'1rem'}>{address}</Text>
    <Text fontWeight={'bold'} py={'1rem'}>{email}</Text>

@@ -4,11 +4,9 @@ import Hero from '../../../../components/Hero/Hero'
 import AllProducts from '@src/features/products'
 import { CustomBreadcrumb } from '../../../../components/CustomBreadcrumb';
 import { defaultBreadcrumbItems } from '@src/helpers';
-import Link from 'next/link';
 import { groq } from 'next-sanity';
 import { ICategory, IProduct } from '@src/model';
 import { client } from '@util/sanity.client';
-import { Text } from '@chakra-ui/react';
 
 
 const query: string = groq`
@@ -37,16 +35,16 @@ const CategoryPage = async ({ params: { id } }: Props) => {
      <Hero heading={products[0].category!.name}
         description={`Best and Affordable Products in  ${products[0].category!.name}`}
         imageUrl={products[0].category!.image}
-        btnLabel="view all Categories"
-        btnLink="/categories"
-        contact={''} 
-        address={''} 
-        email={''}/> 
+        btnLabel="Browse All Products"
+        contact={''}
+        address={''}
+        email={''} 
+        btnLink={'/products'}/> 
 </div>
 
      <CustomBreadcrumb items={[...defaultBreadcrumbItems, {
        name: products[0]!.category!.name,
-       link: '#'
+       link: '/products'
      }]}/>
      <AllProducts products={products}/>
     </>

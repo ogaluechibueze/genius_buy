@@ -2,6 +2,7 @@
 import { Box, Card, CardBody, Grid, GridItem, Heading, Image } from '@chakra-ui/react';
 import { SectionHeading } from '@src/components/SectionHeading';
 import { ICategory } from '@src/model';
+import Link from 'next/link';
 import React from 'react'
 
 
@@ -30,6 +31,7 @@ category: ICategory;
 
 const TopcategoriesCard = ({category}: ITopCategoriesCardProps)=>{
     return (
+      <Link href={`/categories/${category.id}`}>
     <Card direction={'row'} align={'center'} overflow={'hidden'} 
     variant={'outline'} w={'100%'} h={'100%'} p={'10px'}
     _hover={{cursor:'pointer', bgColor:'gray.100'}}>
@@ -37,7 +39,7 @@ const TopcategoriesCard = ({category}: ITopCategoriesCardProps)=>{
      <CardBody>
      <Heading size={{base:'sm', lg:'md'}}>{category.name}</Heading>
      </CardBody>
-   
     </Card>
+    </Link>
     );
 };
