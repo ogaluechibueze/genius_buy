@@ -11,6 +11,7 @@ export const BannerHeadingStyles: HeadingProps = {
     size:{ base: 'xl', lg: '3xl' },
             lineHeight:"4rem",
             color:"brand.primary",
+            paddingTop: "4rem"
 };
 
 export const BannerTextStyles: TextProps = {
