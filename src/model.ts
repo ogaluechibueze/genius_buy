@@ -52,6 +52,7 @@ export interface IItem extends IProduct {
 export interface IBreadcrumbItem {
   name: string;
   link: string;
+ 
 }
 
 export interface IContext {

@@ -15,7 +15,16 @@ const getAllProductsQueries: string = `
         price,   
         rating,
         "slug": slug.current,
+        category->{
+          name,
+          "id": _id,
+          "image": image.asset->url,
+          contact,
+          address,
+          email
+      },
         "mainImage": mainImage.asset->url,
+        
     }
 `;
 

@@ -26,7 +26,8 @@ interface IProductDetailsProps{
     <CustomBreadcrumb items = {[...defaultBreadcrumbItems,
       {
         name: product.category!.name,
-        link: '/categories/${product.category?.id}',
+        link: `/categories/${product.category?.id}`,
+        
       },
       {
         name: getSubstring(product.name,20),
@@ -97,7 +98,7 @@ interface IProductDetailsProps{
             <Box borderWidth={1} borderColor="gray.100" p="1rem">
               <Text fontWeight="bold">Return Delivery</Text>
               <Text color="gray.500">
-                Free 7 Days Delivery Returns After Purchase
+                Free 3 Days Delivery Returns After Purchase
                  {/*<ChakraLink textDecor="underline">Details</ChakraLink>*/} 
               </Text>
             </Box>

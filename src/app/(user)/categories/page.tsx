@@ -13,7 +13,7 @@ const getAllCategoriesQueries = `
         "image": image.asset->url,
         contact,
         address,
-        email
+        email,
     }
 `;
 
@@ -35,8 +35,8 @@ export default async function AllCategoriesPage() {
         btnLabel="View All Products"
         btnLink="/products"
         contact={''} 
-        address={``}
-        email={``}/>
+        address={''}
+        email={''}/>
       <AllCategories categories={categories} />
     </>
   );

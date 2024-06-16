@@ -36,7 +36,7 @@ const CategoryPage = async ({ params: { id } }: Props) => {
         description={`Best and Affordable Products in  ${products[0].category!.name}`}
         imageUrl={products[0].category!.image}
         btnLabel="Browse All Products"
-        contact={''}
+        contact={products[0].category!.address}
         address={''}
         email={''} 
         btnLink={'/products'}/> 

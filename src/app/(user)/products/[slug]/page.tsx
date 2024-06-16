@@ -15,7 +15,9 @@ const query: string = groq`
             name,
             "id": _id,
             "image": image.asset->url,
-            contact,address,email
+            contact,
+            address,
+            email
         },
         "gallery": gallery[].asset->url
     }
