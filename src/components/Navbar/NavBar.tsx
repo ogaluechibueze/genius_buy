@@ -9,8 +9,8 @@ export const Navbar = () => {
   return (
     <Box className='navbar-wrapper' h={'120px'}>
         <Box {...navbarStyles}>
-           <DesktopNav/>
-           <MobileNav/>
+           <DesktopNav />
+           <MobileNav />
         </Box>
         </Box>
   );
